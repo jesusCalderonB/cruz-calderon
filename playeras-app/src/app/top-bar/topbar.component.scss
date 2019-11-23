@@ -1,0 +1,44 @@
+
+.navbar-nav {
+    position: relative;
+    left: 140px;
+    a{
+        color: #333;
+    }
+}
+.navbar-brand {
+    position: absolute;
+    left: 20px;
+}
+.search {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    input {
+        width: 300px;
+        position: relative;
+    }
+    .fas{
+        position: absolute;
+        right: 18px;
+        color: #959595;
+    }
+}
+.user-action {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    a {
+        color: #333;
+        margin-right: 50px;
+        position: relative;
+        
+    }
+    a:before {
+        content: "|";
+        display: block;
+        position: absolute;
+        right: -25px;
+
+    }
+}
