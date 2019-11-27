@@ -63,7 +63,14 @@
       right: 0;
       top: 10px;
     }
-
+    .navbar-nav {
+        position: absolute;
+        left: 140px;
+        background-color: #fff;
+        width: 100%;
+        top: 50px;
+        left: 0;
+    }
     .navbar-brand {
       top: -110px;
 
