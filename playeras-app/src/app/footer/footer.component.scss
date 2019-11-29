@@ -1,0 +1,43 @@
+.page-footer  {
+    
+        background-color: #000;
+        padding-top: .3rem;
+        margin-top: 2rem;
+    a {
+        color: #fff!important;
+    }
+    .container-fluid {
+        margin-top: 3rem;
+    }
+    h5, p {
+        color: #fff;
+    }
+    
+    .form-inline .form-control {
+        width: 100%;
+    }
+    .sm-icons {
+        list-style: none;
+        font-size: 20px;
+    }
+    .im-in{
+        position: relative;
+        span{
+            position: absolute;
+            right: 10px;
+            background-color: #000;
+            color: #fff;
+            height: calc(1.5em + .75rem + 2px);
+            display: flex;
+            align-items: center;
+            padding: .3rem;
+            font-size: 12px;
+            text-transform: uppercase;
+            
+    }
+}
+.footer-copyright {
+    background-color: #999;
+    margin-top: 1rem;
+}
+}

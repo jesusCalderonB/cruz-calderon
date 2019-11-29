@@ -15,6 +15,9 @@ body {
   h1 {
     font-size: 28px;
   }
+  h2 {
+    font-size: 22px;
+  }
 
   * a {
     color: #333;
@@ -54,6 +57,20 @@ body {
     }
   }
   .middle-item{
+    .img-action{
+      position: relative;
+      a{
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        left: 10px;
+        bottom: 20px;
+        padding: .4rem;
+        text-transform: uppercase;
+        font-size: 14px;
+        border: 1px solid #fff;
+      }
+    }
     .card-footer{
         font-size: 11px;
         .price{
@@ -79,5 +96,9 @@ body {
             border-radius: 20px;
         }
     }
+  }
+  .banner-section img {
+    display: flex;
+    margin: auto;
   }
 }
