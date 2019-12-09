@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {TopBarComponent} from './top-bar/topbar.component';
-import {FooterComponent} from './footer/footer.component'
+import {FooterComponent} from './footer/footer.component';
+import {ProductsComponent} from './products/products.component';
+import {HombresComponent } from './hombres/hombres.component';
+import { MainComponent } from './main.component'
 
 
 const routes: Routes = [
-  {path: './top-bar/topbar.component',component: TopBarComponent},
-  {path: './footer/footer.component',component: FooterComponent},
+  {path: 'topbar',component: TopBarComponent, children :
+  [
+    {path: 'products',component: ProductsComponent},
+    {path: 'hombres',component: HombresComponent},
+    {path: 'main',component: MainComponent},
+  ]
+  },
+
+// {path: 'hombres',component: HombresComponent},
+{path: 'footer',component: FooterComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)] ,
-  exports: [RouterModule],
-
+  exports: [ RouterModule ],
+  imports: [ RouterModule.forRoot(routes) ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -7,11 +7,11 @@
                       </form>
         </div>
         <div class="col-12 col-md-4 user-action">
-            <a href=""><i class="fas fa-shopping-cart"></i>  Carrito</a>
+            <a routerLink=""><i class="fas fa-shopping-cart"></i>  Carrito</a>
           
               <!-- Signin - Register -->
               <div class="dropdown">
-                  <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a routerLink="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user"></i> 
                     Entrar
                  </a>
@@ -53,7 +53,7 @@
                                       </button>
                                     </div>
                                     <div class="margin-top20 text-center">
-                                      ¿Ya tienes cuenta? <a href="index.html">Entrar</a>
+                                      ¿Ya tienes cuenta? <a routerLink="index.html">Entrar</a>
                                     </div>
                                   </form>
                                 </div>
@@ -92,7 +92,7 @@
                         
                                         <div class="form-group">
                                           <label for="password">Contraseña
-                                            <a href="forgot.html" class="float-right">
+                                            <a routerLink="forgot.html" class="float-right">
                                               ¿Olvidaste tu contraseña?
                                             </a>
                                           </label>
@@ -111,7 +111,7 @@
                                           </button>
                                         </div>
                                         <div class="margin-top20 text-center">
-                                          ¿No tienes cuenta? <a href="register.html">Crea una</a>
+                                          ¿No tienes cuenta? <a routerLink="register.html">Crea una</a>
                                         </div>
                                       </form>
                                     </div>
@@ -127,13 +127,13 @@
                 </div>
               <!-- Signin - Register -->
             
-            <a href="">Registro</a>
+            <a routerLink="">Registro</a>
         </div>
     </div>
         
 
 <nav class="navbar navbar-expand-md navbar-white bg-white mt-3">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="#">
         <img src="assets/logo.svg" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,29 +143,32 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" [routerLink]="['main']">Home <span class="sr-only">(current)</span></a>
                   </li>
             <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Todos los modelos</a>
+                    <a class="nav-link dropdown-toggle" routerLink="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Todos los modelos</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                      <a class="dropdown-item" href="#">1</a>
-                      <a class="dropdown-item" href="#">2</a>
-                      <a class="dropdown-item" href="#">3</a>
+                      <a class="dropdown-item" routerLink="#">1</a>
+                      <a class="dropdown-item" routerLink="#">2</a>
+                      <a class="dropdown-item" routerLink="#">3</a>
                     </div>
                   </li>
        
         <li class="nav-item">
-          <a class="nav-link" href="#">Hombre</a>
+          <a class="nav-link" [routerLink]="['./hombres']">Hombre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mujer</a>
+          <a class="nav-link" [routerLink]="['./mujeres']">Mujer</a>
         </li>
         <li class="nav-item">
-                <a class="nav-link" href="#">Promociones</a>
+                <a class="nav-link" [routerLink]="['./productos']">Promociones</a>
               </li>
      
       </ul>
       
     </div>
   </nav>
+ 
 </div>
+<router-outlet></router-outlet>
+
