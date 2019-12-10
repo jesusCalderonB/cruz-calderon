@@ -10,6 +10,8 @@ import {FooterComponent} from './footer/footer.component';
 import { HombresComponent } from './hombres/hombres.component';
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './main.component';
+import { MujeresComponent } from './mujeres/mujeres.component';
+// import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MainComponent } from './main.component';
     FooterComponent,
     HombresComponent,
     MainComponent,
+    MujeresComponent,
+    // NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,8 +32,10 @@ import { MainComponent } from './main.component';
     BreadcrumbModule,
     RouterModule.forRoot([
       { path: 'main',component: MainComponent},
-      { path: 'hombres', component: HombresComponent },
-      { path: 'productos',component: ProductsComponent, data: { breadcrumb: 'productos'}},
+      { path: 'hombres', component: HombresComponent, data: { breadcrumb: 'Hombres'} },
+      { path: 'mujeres', component: MujeresComponent, data: { breadcrumb: 'Mujeres'} },
+      { path: 'productos',component: ProductsComponent, data: { breadcrumb: 'Productos'}},
+      // { path: '**', component: NotFoundComponent }
     ])
   ],
 
