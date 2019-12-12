@@ -1,552 +1,227 @@
 <!-- Content Products -->
 <div class="container-fluid products ">
-    <div class="row">
-        <div class="col-12">
-                <breadcrumb #parent>  
-                    <ol class="breadcrumb">
-                      <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
-                        <li *ngIf="!route.terminal" class="breadcrumb-item">
-                          <a href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
-                        </li>
-                        <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
-                      </ng-template>
-                    </ol>
-                  </breadcrumb>  
+  <div class="row">
+    <div class="col-12">
+      <breadcrumb #parent>
+        <ol class="breadcrumb">
+          <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+            <li *ngIf="!route.terminal" class="breadcrumb-item">
+              <a href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
+            </li>
+            <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
+          </ng-template>
+        </ol>
+      </breadcrumb>
+    </div>
+    <div class="col-12 col-lg-2">
+      <div id="accordion" class="filters panel panel-primary behclick-panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">Filtrar por:</h3>
         </div>
-        <div class="col-12 col-lg-2">
-          <div id="accordion" class="filters panel panel-primary behclick-panel">
-            <div class="panel-heading">
-              <h3 class="panel-title">Filtrar por:</h3>
-            </div>
-            <div class="panel-body" >
-              <div class="panel-heading " >
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse0">
-                    <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Precio
-                  </a>
-                </h4>
-              </div>
-              <div id="collapse0" class="panel-collapse collapse in" >
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        0 - 1000 MXN
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox" >
-                      <label>
-                        <input type="checkbox" value="">
-                        1000$ - 2000 MXN
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox"  >
-                      <label>
-                        <input type="checkbox" value="">
-                        2000$ - 6000 MXN
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox"  >
-                      <label>
-                        <input type="checkbox" value="">
-                        Mas de 6000 MXN
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-    
-              <div class="panel-heading " >
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse1">
-                    <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Categoría
-                  </a>
-                </h4>
-              </div>
-              <div id="collapse1" class="panel-collapse collapse in" >
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        Avengers
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox" >
-                      <label>
-                        <input type="checkbox" value="">
-                        Star Wars
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox"  >
-                      <label>
-                        <input type="checkbox" value="">
-                        Geek
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="panel-heading" >
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Color</a>
-                </h4>
-              </div>
-              <div id="collapse3" class="panel-collapse collapse in">
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        Rojo
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox" >
-                      <label>
-                        <input type="checkbox" value="">
-                        Azul
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox"  >
-                      <label>
-                        <input type="checkbox" value="">
-                        Verde
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="panel-heading" >
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i> Talla</a>
-                </h4>
-              </div>
-              <div id="collapse2" class="panel-collapse collapse">
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        XS
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox" >
-                      <label>
-                        <input type="checkbox" value="">
-                        S
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        M
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="">
-                        G
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="panel-body">
+          <div class="panel-heading ">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse0">
+                <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Precio
+              </a>
+            </h4>
+          </div>
+          <div id="collapse0" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    0 - 1000 MXN
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    1000$ - 2000 MXN
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    2000$ - 6000 MXN
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Mas de 6000 MXN
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel-heading ">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1">
+                <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Categoría
+              </a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Avengers
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Star Wars
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Geek
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>
+                Color</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Rojo
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Azul
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Verde
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i>
+                Talla</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    XS
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    S
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    M
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    G
+                  </label>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      
-        <div class="col-12 col-lg-10">
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <h2>Productos</h2>
-                    </div>
-                        <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                          <div class="card">
-                            <div class="img-action">
-                              <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                              <a href="">Comprar</a>
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Titulo Producto</h5>
-                              <p class="card-text">Texto</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="row">
-                                <div class="col-8 price">
-                                  <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                </div>
-                                <div class="col-4 discount">
-                                  30% Desc
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                          <div class="card">
-                            <div class="img-action">
-                              <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                              <a href="">Comprar</a>
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Titulo Producto</h5>
-                              <p class="card-text">Texto</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="row">
-                                <div class="col-8 price">
-                                  <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                </div>
-                                <div class="col-4 discount">
-                                  30% Desc
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                          <div class="card">
-                            <div class="img-action">
-                              <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                              <a href="">Comprar</a>
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Titulo Producto</h5>
-                              <p class="card-text">Texto</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="row">
-                                <div class="col-8 price">
-                                  <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                </div>
-                                <div class="col-4 discount">
-                                  30% Desc
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                          <div class="card">
-                            <div class="img-action">
-                              <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                              <a href="">Comprar</a>
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Titulo Producto</h5>
-                              <p class="card-text">Texto</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="row">
-                                <div class="col-8 price">
-                                  <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                </div>
-                                <div class="col-4 discount">
-                                  30% Desc
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                      </div>
-                      <div class="row mb-3">
-                            <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                              <div class="card">
-                                <div class="img-action">
-                                  <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                  <a href="">Comprar</a>
-                                </div>
-                                <div class="card-body">
-                                  <h5 class="card-title">Titulo Producto</h5>
-                                  <p class="card-text">Texto</p>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="row">
-                                    <div class="col-8 price">
-                                      <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                    </div>
-                                    <div class="col-4 discount">
-                                      30% Desc
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                              <div class="card">
-                                <div class="img-action">
-                                  <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                  <a href="">Comprar</a>
-                                </div>
-                                <div class="card-body">
-                                  <h5 class="card-title">Titulo Producto</h5>
-                                  <p class="card-text">Texto</p>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="row">
-                                    <div class="col-8 price">
-                                      <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                    </div>
-                                    <div class="col-4 discount">
-                                      30% Desc
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                              <div class="card">
-                                <div class="img-action">
-                                  <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                  <a href="">Comprar</a>
-                                </div>
-                                <div class="card-body">
-                                  <h5 class="card-title">Titulo Producto</h5>
-                                  <p class="card-text">Texto</p>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="row">
-                                    <div class="col-8 price">
-                                      <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                    </div>
-                                    <div class="col-4 discount">
-                                      30% Desc
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                              <div class="card">
-                                <div class="img-action">
-                                  <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                  <a href="">Comprar</a>
-                                </div>
-                                <div class="card-body">
-                                  <h5 class="card-title">Titulo Producto</h5>
-                                  <p class="card-text">Texto</p>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="row">
-                                    <div class="col-8 price">
-                                      <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                    </div>
-                                    <div class="col-4 discount">
-                                      30% Desc
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            
-                          </div>
-                          <div class="row mb-3">
-                                <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                  <div class="card">
-                                    <div class="img-action">
-                                      <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                      <a href="">Comprar</a>
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Titulo Producto</h5>
-                                      <p class="card-text">Texto</p>
-                                    </div>
-                                    <div class="card-footer">
-                                      <div class="row">
-                                        <div class="col-8 price">
-                                          <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                        </div>
-                                        <div class="col-4 discount">
-                                          30% Desc
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                  <div class="card">
-                                    <div class="img-action">
-                                      <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                      <a href="">Comprar</a>
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Titulo Producto</h5>
-                                      <p class="card-text">Texto</p>
-                                    </div>
-                                    <div class="card-footer">
-                                      <div class="row">
-                                        <div class="col-8 price">
-                                          <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                        </div>
-                                        <div class="col-4 discount">
-                                          30% Desc
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                  <div class="card">
-                                    <div class="img-action">
-                                      <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                      <a href="">Comprar</a>
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Titulo Producto</h5>
-                                      <p class="card-text">Texto</p>
-                                    </div>
-                                    <div class="card-footer">
-                                      <div class="row">
-                                        <div class="col-8 price">
-                                          <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                        </div>
-                                        <div class="col-4 discount">
-                                          30% Desc
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                  <div class="card">
-                                    <div class="img-action">
-                                      <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                      <a href="">Comprar</a>
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Titulo Producto</h5>
-                                      <p class="card-text">Texto</p>
-                                    </div>
-                                    <div class="card-footer">
-                                      <div class="row">
-                                        <div class="col-8 price">
-                                          <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                        </div>
-                                        <div class="col-4 discount">
-                                          30% Desc
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                              <div class="row mb-3">
-                                    <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                      <div class="card">
-                                        <div class="img-action">
-                                          <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                          <a href="">Comprar</a>
-                                        </div>
-                                        <div class="card-body">
-                                          <h5 class="card-title">Titulo Producto</h5>
-                                          <p class="card-text">Texto</p>
-                                        </div>
-                                        <div class="card-footer">
-                                          <div class="row">
-                                            <div class="col-8 price">
-                                              <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                            </div>
-                                            <div class="col-4 discount">
-                                              30% Desc
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                      <div class="card">
-                                        <div class="img-action">
-                                          <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                          <a href="">Comprar</a>
-                                        </div>
-                                        <div class="card-body">
-                                          <h5 class="card-title">Titulo Producto</h5>
-                                          <p class="card-text">Texto</p>
-                                        </div>
-                                        <div class="card-footer">
-                                          <div class="row">
-                                            <div class="col-8 price">
-                                              <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                            </div>
-                                            <div class="col-4 discount">
-                                              30% Desc
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                      <div class="card">
-                                        <div class="img-action">
-                                          <img src="../assets/picolo-hombre-turquesa671910.jpg" class="card-img-top d-block w-100" alt="...">
-                                          <a href="">Comprar</a>
-                                        </div>
-                                        <div class="card-body">
-                                          <h5 class="card-title">Titulo Producto</h5>
-                                          <p class="card-text">Texto</p>
-                                        </div>
-                                        <div class="card-footer">
-                                          <div class="row">
-                                            <div class="col-8 price">
-                                              <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                            </div>
-                                            <div class="col-4 discount">
-                                              30% Desc
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-3 middle-item">
-                                      <div class="card">
-                                        <div class="img-action">
-                                          <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
-                                          <a href="">Comprar</a>
-                                        </div>
-                                        <div class="card-body">
-                                          <h5 class="card-title">Titulo Producto</h5>
-                                          <p class="card-text">Texto</p>
-                                        </div>
-                                        <div class="card-footer">
-                                          <div class="row">
-                                            <div class="col-8 price">
-                                              <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
-                                            </div>
-                                            <div class="col-4 discount">
-                                              30% Desc
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    
-                                  </div>
+      </div>
+    </div>
+  <!-- *  Products -->
+    <div class="col-12 col-lg-10">
+      <div class="row mb-3">
+        <div class="col-12">
+          <h2>Productos</h2>
         </div>
- 
-  
-            </div>
+      </div>
+          <!-- *  Product item -->
+          <div class="row">
+          <div class="col-12">
+          <div class="list mt-3">
+          <ul>
+            <div class="row">
+             <li *ngFor="let item of collection | paginate: config" class="col-12 col-sm-12 col-lg-3 middle-item mb-4">
+           
+              <div class="card">
+                <div class="img-action">
+                  <img src="../assets/sudadera_con-mezcla.jpg" class="card-img-top d-block w-100" alt="...">
+                  <a href="">Comprar</a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ item }}</h5>
+                  <p class="card-text">Texto</p>
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-8 price">
+                      <p><span>$30.00</span> <span> - $20.00 MXN</span></p>
+                    </div>
+                    <div class="col-4 discount">
+                      30% Desc
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </li>
+        </div>
+          </ul>
+          <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+          </div>
+     </div>
+    </div>
+    </div>
+      <!-- *  Products -->
+  </div>
 </div>
 <!-- Content Products -->
+

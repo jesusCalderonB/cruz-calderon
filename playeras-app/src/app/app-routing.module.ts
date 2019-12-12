@@ -6,6 +6,7 @@ import {ProductsComponent} from './products/products.component';
 import {HombresComponent } from './hombres/hombres.component';
 import {MujeresComponent } from './mujeres/mujeres.component';
 import { MainComponent } from './main.component';
+import { ItemDetallComponent } from './item-detall/item-detall.component';
 // import {NotFoundComponent} from './not-found.component';
 
 
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path: 'main',component: MainComponent},
   ]
   },
-{path: 'footer',component: FooterComponent},
+  {path:'detalle-producto', component: ItemDetallComponent}, 
+  {path: 'footer',component: FooterComponent},
 // { path: '**', component: NotFoundComponent },
 ];
 
