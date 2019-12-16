@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {TopBarComponent} from './top-bar/topbar.component';
-import {FooterComponent} from './footer/footer.component';
-import {ProductsComponent} from './products/products.component';
-import {HombresComponent } from './hombres/hombres.component';
-import {MujeresComponent } from './mujeres/mujeres.component';
+import {TopBarComponent} from './V01/top-bar/topbar.component';
+import {FooterComponent} from './V01/footer/footer.component';
+import {ProductsComponent} from './V01/products/components/products/products.component';
+import {HombresComponent } from './V01/hombres/hombres.component';
+import {MujeresComponent } from './V01/mujeres/mujeres.component';
 import { MainComponent } from './main.component';
-import { ItemDetallComponent } from './item-detall/item-detall.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { ItemDetallComponent } from './V01/item-detall/item-detall.component';
 // import {NotFoundComponent} from './not-found.component';
 
 
