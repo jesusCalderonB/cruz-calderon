@@ -7,11 +7,13 @@ import {HombresComponent } from './hombres/hombres.component';
 import {MujeresComponent } from './mujeres/mujeres.component';
 import { MainComponent } from './main.component';
 import { ItemDetallComponent } from './item-detall/item-detall.component';
+import { CarritoComponent } from './carrito/carrito.component';
 // import {NotFoundComponent} from './not-found.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path:'detalle-producto', component: ItemDetallComponent},
   {path: 'topbar',component: TopBarComponent, children :
   [
     {path: 'products',component: ProductsComponent},
@@ -20,7 +22,7 @@ const routes: Routes = [
     {path: 'main',component: MainComponent},
   ]
   },
-  {path:'detalle-producto', component: ItemDetallComponent}, 
+  {path: 'carrito',component: CarritoComponent},
   {path: 'footer',component: FooterComponent},
 // { path: '**', component: NotFoundComponent },
 ];
