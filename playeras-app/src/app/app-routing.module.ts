@@ -8,12 +8,14 @@ import {MujeresComponent } from './mujeres/mujeres.component';
 import { MainComponent } from './main.component';
 import { ItemDetallComponent } from './item-detall/item-detall.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import {CarritoRevisarComponent} from './carrito/carrito-revisar/carrito-revisar.component';
+import {TotalCarComponent} from './carrito/total-car/total-car.component';
 // import {NotFoundComponent} from './not-found.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full'},
-  {path:'detalle-producto', component: ItemDetallComponent},
+  { path:'detalle-producto', component: ItemDetallComponent },
   {path: 'topbar',component: TopBarComponent, children :
   [
     {path: 'products',component: ProductsComponent},
@@ -22,7 +24,11 @@ const routes: Routes = [
     {path: 'main',component: MainComponent},
   ]
   },
-  {path: 'carrito',component: CarritoComponent},
+  {path: 'carrito',component: CarritoComponent, children:
+  [
+    {path: 'carrito-revisar',component: CarritoRevisarComponent},
+  ]
+},
   {path: 'footer',component: FooterComponent},
 // { path: '**', component: NotFoundComponent },
 ];

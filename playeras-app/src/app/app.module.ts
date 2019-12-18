@@ -16,6 +16,8 @@ import { ItemDetallComponent } from './item-detall/item-detall.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { RelacionadosComponent } from './relacionados/relacionados.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { CarritoRevisarComponent } from './carrito/carrito-revisar/carrito-revisar.component';
+import { TotalCarComponent } from './carrito/total-car/total-car.component';
 // import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
@@ -31,6 +33,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ComentariosComponent,
     RelacionadosComponent,
     CarritoComponent,
+    CarritoRevisarComponent,
+    TotalCarComponent,
     // NotFoundComponent,
   ],
   imports: [
@@ -47,6 +51,7 @@ import { CarritoComponent } from './carrito/carrito.component';
       { path: 'productos',component: ProductsComponent, data: { breadcrumb: 'Productos'}},
       { path:'detalle-producto', component: ItemDetallComponent, data: { breadcrumn:'Detalle' }},
       { path:'carrito', component: CarritoComponent, data: { breadcrumn:'Mi carrito' }},
+      { path:'carrito/carrito-revisar', component: CarritoRevisarComponent, data: { breadcrumn:'Revisar' }},
       // { path: '**', component: NotFoundComponent }
     ])
   ],

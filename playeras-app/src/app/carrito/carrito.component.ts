@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TotalCarComponent } from './total-car/total-car.component';
+// import { CarritoRevisarComponent } from './carrito-revisar/carrito-revisar.component';
 
 @Component({
   selector: 'carrito',

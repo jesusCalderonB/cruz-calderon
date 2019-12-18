@@ -1,0 +1,41 @@
+.my-car{
+    &.review{
+        .h4, h4 {
+            font-size: 1.1rem;
+        }
+    }
+    .step{
+        list-style: none;
+        display: flex;
+        li{
+            display: inline-flex;
+            width: 49%;
+            &.active{
+              span{
+                background-color: #999;
+                color: #fff;
+              }
+            }
+            &:first-child{
+                &:before{
+                    content: " ";
+                    position: absolute;
+                    width: 45%;
+                    height: 2px;
+                    background-color: #999;
+                    top: 12px;
+                }
+            }
+        }
+         span {
+            border: 1px solid #999;
+            border-radius: 15PX;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            
+        }
+    }
+}
