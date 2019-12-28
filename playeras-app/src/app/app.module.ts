@@ -5,23 +5,27 @@ import {BreadcrumbModule} from 'angular-crumbs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule  } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
-import { TopBarComponent } from './top-bar/topbar.component';
-import {FooterComponent} from './footer/footer.component';
-import { HombresComponent } from './hombres/hombres.component';
+import { ProductsComponent } from './V01/products/components/products/products.component';
+import { TopBarComponent } from './V01/top-bar/topbar.component';
+import {FooterComponent} from './V01/footer/footer.component';
+import { HombresComponent } from './V01/hombres/hombres.component';
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './main.component';
-import { MujeresComponent } from './mujeres/mujeres.component';
-import { ItemDetallComponent } from './item-detall/item-detall.component';
-import { ComentariosComponent } from './comentarios/comentarios.component';
-import { RelacionadosComponent } from './relacionados/relacionados.component';
+import { MujeresComponent } from './V01/mujeres/mujeres.component';
+import { ItemDetallComponent } from './V01/item-detall/item-detall.component';
+import { ComentariosComponent } from './V01/comentarios/comentarios.component';
+import { RelacionadosComponent } from './V01/relacionados/relacionados.component';
+import { HttpClientModule } from '@angular/common/http';
 import { CarritoComponent } from './carrito/carrito.component';
 import { CarritoRevisarComponent } from './carrito/carrito-revisar/carrito-revisar.component';
 import { TotalCarComponent } from './carrito/total-car/total-car.component';
 // import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
-  declarations: [
+  exports:[
+    ProductsComponent
+  ]
+  ,declarations: [
     AppComponent,
     ProductsComponent,
     TopBarComponent,
@@ -38,6 +42,7 @@ import { TotalCarComponent } from './carrito/total-car/total-car.component';
     // NotFoundComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     [NgbModule],
