@@ -1,0 +1,60 @@
+<!-- Content Contacto -->
+
+<div class="container-fluid Contact ">
+    <div class="row">
+        <div class="col-12">
+                <breadcrumb #parent>  
+                    <ol class="breadcrumb">
+                      <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+                        <li *ngIf="!route.terminal" class="breadcrumb-item">
+                          <a href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
+                        </li>
+                        <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
+                      </ng-template>
+                    </ol>
+                  </breadcrumb>  
+        </div>
+        
+      
+        <div class="col-12">
+                <div class="row mb-3">
+                 
+                    <form class="contact-form">
+                        <div class="bg-contact2">
+                            <div class="container-contact2">
+                                <div class="wrap-contact2">
+                                    <form class="contact2-form validate-form">
+                                        <h2 class="mb-4">Contacto</h2>
+                    
+                                        <div class="wrap-input2 validate-input" data-validate="Nombre es requerido">
+                                            <input class="input2" type="text" name="name">
+                                            <span class="focus-input2" data-placeholder="Nombre"></span>
+                                        </div>
+                    
+                                        <div class="wrap-input2 validate-input" data-validate = "Debe ser un correo válido: ex@abc.xyz">
+                                            <input class="input2" type="text" name="email">
+                                            <span class="focus-input2" data-placeholder="Correo electrónico"></span>
+                                        </div>
+                    
+                                        <div class="wrap-input2 validate-input" data-validate = "Mensaje es requerido">
+                                            <textarea class="input2" name="message"></textarea>
+                                            <span class="focus-input2" data-placeholder="Mensaje"></span>
+                                        </div>
+                    
+                                        <div class="container-contact2-form-btn">
+                                            <div class="wrap-contact2-form-btn">
+                                                <div class="contact2-form-bgbtn"></div>
+                                                <button class="contact2-form-btn">
+                                                    Mandar mensaje
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

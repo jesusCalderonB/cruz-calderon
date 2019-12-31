@@ -10,6 +10,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import {CarritoRevisarComponent} from './carrito/carrito-revisar/carrito-revisar.component';
 import {TotalCarComponent} from './carrito/total-car/total-car.component';
 import { ItemDetallComponent } from './V01/item-detall/item-detall.component';
+import {ContactoComponent} from './V01/contacto/contacto.component';
 // import {NotFoundComponent} from './not-found.component';
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path: 'hombres',component: HombresComponent},
     {path: 'mujeres',component: MujeresComponent},
     {path: 'main',component: MainComponent},
+    {path: 'contacto',component: ContactoComponent},
   ]
   },
   {path: 'carrito',component: CarritoComponent, children:

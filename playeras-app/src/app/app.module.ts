@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarritoComponent } from './carrito/carrito.component';
 import { CarritoRevisarComponent } from './carrito/carrito-revisar/carrito-revisar.component';
 import { TotalCarComponent } from './carrito/total-car/total-car.component';
+import { ContactoComponent } from './V01/contacto/contacto.component';
 // import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
@@ -39,6 +40,7 @@ import { TotalCarComponent } from './carrito/total-car/total-car.component';
     CarritoComponent,
     CarritoRevisarComponent,
     TotalCarComponent,
+    ContactoComponent,
     // NotFoundComponent,
   ],
   imports: [
@@ -57,6 +59,7 @@ import { TotalCarComponent } from './carrito/total-car/total-car.component';
       { path:'detalle-producto', component: ItemDetallComponent, data: { breadcrumn:'Detalle' }},
       { path:'carrito', component: CarritoComponent, data: { breadcrumn:'Mi carrito' }},
       { path:'carrito/carrito-revisar', component: CarritoRevisarComponent, data: { breadcrumn:'Revisar' }},
+      { path: 'contacto',component: ContactoComponent},
       // { path: '**', component: NotFoundComponent }
     ])
   ],
