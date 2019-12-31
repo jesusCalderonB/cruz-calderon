@@ -226,7 +226,7 @@ input.input2 {
 }
 
 input.input2 + .focus-input2::after {
-  top: 16px;
+  top: 0;
   left: 0;
 }
 
@@ -237,7 +237,7 @@ textarea.input2 {
 }
 
 textarea.input2 + .focus-input2::after {
-  top: 16px;
+  top: 0;
   left: 0;
 }
 
