@@ -20,6 +20,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { CarritoRevisarComponent } from './carrito/carrito-revisar/carrito-revisar.component';
 import { TotalCarComponent } from './carrito/total-car/total-car.component';
 import { ContactoComponent } from './V01/contacto/contacto.component';
+import { FiltrosComponent } from './V01/filtros/filtros.component';
 // import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ContactoComponent } from './V01/contacto/contacto.component';
     CarritoRevisarComponent,
     TotalCarComponent,
     ContactoComponent,
+    FiltrosComponent,
     // NotFoundComponent,
   ],
   imports: [
