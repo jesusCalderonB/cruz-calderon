@@ -1,0 +1,174 @@
+<div class="fixed-top">
+    <div class="row mt-3">
+        <div class="col-12 col-md-8">
+                <form class="form-inline my-2 my-lg-0 search">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                      </form>
+        </div>
+        <div class="col-12 col-md-4 user-action">
+            <a [routerLink]="['./carrito']"><i class="fas fa-shopping-cart"></i>  Carrito</a>
+          
+              <!-- Signin - Register -->
+              <div class="dropdown">
+                  <a routerLink="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i> 
+                    Entrar
+                 </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <div class="container h-100 login-card">
+                          <div class="row justify-content-md-center h-100">
+                            <div class="card-wrapper">
+                              
+                              <div class="card fat">
+                                <div class="card-body">
+                                  <h4 class="card-title">Registro</h4>
+                                  <form method="POST">
+                                   
+                                    <div class="form-group">
+                                      <label for="name">Nombre</label>
+                                      <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                    </div>
+                    
+                                    <div class="form-group">
+                                      <label for="email">Corre electrónico</label>
+                                      <input id="email" type="email" class="form-control" name="email" required>
+                                    </div>
+                    
+                                    <div class="form-group">
+                                      <label for="password">Contraseña</label>
+                                      <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                    </div>
+                    
+                                    <div class="form-group">
+                                      <label>
+                                        <input type="checkbox" name="aggree" value="1"> Acepto los terminos y condiciones
+                                      </label>
+                                    </div>
+                    
+                                    <div class="form-group no-margin">
+                                      <button type="submit" class="btn btn-dark btn-block">
+                                        Registrarme
+                                      </button>
+                                    </div>
+                                    <div class="margin-top20 text-center">
+                                      ¿Ya tienes cuenta? <a routerLink="index.html">Entrar</a>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                              <div class="card fat forgot">
+                                  <div class="card-body">
+                                    <h4 class="card-title">Olvide mi contraseña</h4>
+                                    <form method="POST">
+                                     
+                                      <div class="form-group">
+                                        <label for="email">Correo electrónico</label>
+                                        <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                                        <div class="form-text text-muted">
+                                          Haz click aquí para "Generar tu contraseña" y te mandaremos una liga para crear una nueva contraseña
+                                        </div>
+                                      </div>
+                      
+                                      <div class="form-group no-margin">
+                                        <button type="submit" class="btn btn-primary btn-block">
+                                          Generar contraseña
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="card fat login">
+                                    <div class="card-body">
+                                      <h4 class="card-title">Entrar</h4>
+                                      <form method="POST">
+                                       
+                                        <div class="form-group">
+                                          <label for="email">Corre electrónico</label>
+                        
+                                          <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                          <label for="password">Contraseña
+                                            <a routerLink="forgot.html" class="float-right">
+                                              ¿Olvidaste tu contraseña?
+                                            </a>
+                                          </label>
+                                          <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                          <label>
+                                            <input type="checkbox" name="remember"> Recuerdame
+                                          </label>
+                                        </div>
+                        
+                                        <div class="form-group no-margin">
+                                          <button type="submit" class="btn btn-primary btn-block">
+                                            Entrar
+                                          </button>
+                                        </div>
+                                        <div class="margin-top20 text-center">
+                                          ¿No tienes cuenta? <a routerLink="register.html">Crea una</a>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                              <div class="footer">
+                                Copyright &copy; Nombre Tienda 2020
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                     
+                  </div>
+                </div>
+              <!-- Signin - Register -->
+            
+            <a routerLink="">Contacto</a>
+        </div>
+    </div>
+        
+
+<nav class="navbar navbar-expand-md navbar-white bg-white mt-3">
+    <a class="navbar-brand" routerLink="#">
+        <img src="assets/logo.svg" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['main']">Home <span class="sr-only">(current)</span></a>
+                  </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Todos los modelos</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item" routerLink="#">1</a>
+                      <a class="dropdown-item" routerLink="#">2</a>
+                      <a class="dropdown-item" routerLink="#">3</a>
+                    </div>
+                  </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['./hombres']">Hombre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['./mujeres']">Mujer</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./productos']">Promociones</a>
+              </li>
+     
+      </ul>
+      
+    </div>
+  </nav>
+ 
+</div>
+<router-outlet></router-outlet>
+
